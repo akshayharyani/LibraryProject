@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Libaray Management System</title>
+<script src="lib/Angular/angular.js"></script>
+<script src="lib/Angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/customfilters.js"></script>
+<script src="js/customservices.js"></script>
+<script src="js/controllers.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body ng-app="libApp" ng-controller="LoginCtrl">
+	<center>
+		<div ng-include="'Header.html'"></div>
+	</center>
+	<div ng-view></div>
+	<div ng-include="'Footer.html'"></div>
+</html>

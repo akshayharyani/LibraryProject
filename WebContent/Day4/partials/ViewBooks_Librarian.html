@@ -1,0 +1,35 @@
+<center>
+	View Books : <select ng-model="viewbookoption">
+		<option value="All" selected="selected">All Books</option>
+		<option value="Available">Available Books</option>
+	</select> 
+	<br> 
+	Sort Books : <select ng-model="sortbookoption">
+		<option value="" selected="selected">No Sort</option>
+		<option value="bookTitle">Book title</option>
+		<option value="bookCost">Cost</option>
+		<option value="bookAuthor">Author</option>
+	</select> 
+	<br> 
+	Search : <input ng-model="query" />
+	<table>
+		<tr>
+			<th>Sl no.</th>
+			<th>Image</th>
+			<th>Details</th>
+		</tr>
+		<tr ng-repeat="book in books | filterunissued :viewbookoption | filter:query | orderBy:sortbookoption">
+			<td>{{ $index+1 }}</td>
+			<td><img src="{{ book.imgUrl }}"
+				style="height: 150px; width: 150px;" /></td>
+			<td>Book Id : {{ book.bookId }} <br>
+				 Book Title : {{ book.bookTitle }} <br> 
+				 Book Topic : {{ book.bookTopic }} <br>
+				Book Author : {{ book.bookAuthor }} <br> 
+				Book Cost : {{ book.bookCost | currency:"Rs " }} <br>
+				Isuued : {{ book.issued }} <br>
+				<input type="button" value="Issue book" ng-disabled="{{ !book.issued }} " ng-click="changeView('/isuue/'+book.bookId)"> &nbsp &nbsp <input type="button" value="Return book" ng-disabled="book.issued" ng-click="changeView('/return/'+book.bookId)"> 
+			</td>
+		</tr>
+	</table>
+</center>

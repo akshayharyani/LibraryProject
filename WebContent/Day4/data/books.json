@@ -1,0 +1,29 @@
+[
+	{
+		"bookId" : 101,
+		"bookTitle" : "Angular Js",
+		"bookTopic" : "Angular Js",
+		"bookAuthor" : "Green",
+		"bookCost" : 375,
+		"imgUrl" : "imgs/abc.png",
+		"issued": true
+	},
+	{
+		"bookId" : 102,
+		"bookTitle" : "Instant AngularJs starter",
+		"bookTopic" : "Angular Js",
+		"bookAuthor" : "Dan Menard",
+		"bookCost" : 150,
+		"imgUrl" : "imgs/abc.png",
+		"issued": false
+	},
+	{
+		"bookId" : 103,
+		"bookTitle" : "Ng-book the complete book on Angular Js",
+		"bookTopic" : "Angular Js",
+		"bookAuthor" : "Ari Lerner",
+		"bookCost" : 4657,
+		"imgUrl" : "imgs/abc.png",
+		"issued": true
+	}
+]

@@ -1,0 +1,20 @@
+<center>
+	<h2 style="color:red;font-style: italic">{{ 'Issue Book' }}</h2>
+	<table>
+		<tr>
+			<th>Image</th>
+			<th>Details</th>
+		</tr>
+		<tr>
+			<td><img src="{{ book.imgUrl }}" style="height: 150px; width: 150px;" /></td>
+			<td>Book Id : {{ book.bookId }} <br>
+				 Book Title : {{ book.bookTitle }} <br> 
+				 Book Topic : {{ book.bookTopic }} <br>
+				Book Author : {{ book.bookAuthor }} <br> 
+				Book Cost : {{ book.bookCost | currency:"Rs " }} <br>
+				Isuued : {{ book.issued }} <br>
+				<input type="button" value="Issue book" ng-disabled="{{ !book.issued }} " ng-click="issue(book.bookId)"> 
+			</td>
+		</tr>
+	</table>
+</center>
